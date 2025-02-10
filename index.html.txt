@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Доставка еды</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Доставка еды из ресторанов</h1>
+    </header>
+
+    <main>
+        <section class="restaurants">
+            <h2>Выберите ресторан:</h2>
+            <div class="restaurant-list">
+                <div class="restaurant">
+                    <h3>Итальянская кухня</h3>
+                    <img src="img/pizza.jpg" alt="Итальянская еда">
+                    <button onclick="showMenu('italian')">Смотреть меню</button>
+                </div>
+
+                <div class="restaurant">
+                    <h3>Японская кухня</h3>
+                    <img src="img/sushi.jpg" alt="Суши">
+                    <button onclick="showMenu('japanese')">Смотреть меню</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu" class="hidden">
+            <h2>Меню</h2>
+            <div id="menu-items"></div>
+            <button onclick="hideMenu()">Назад</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

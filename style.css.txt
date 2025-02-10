@@ -1,0 +1,22 @@
+const menus = {
+    italian: [
+        { name: "Пицца Маргарита", price: "500 грн." },
+        { name: "Паста Карбонара", price: "450 грн." }
+    ],
+    japanese: [
+        { name: "Суши сет", price: "700 грн." },
+        { name: "Роллы Филадельфия", price: "600 грн." }
+    ]
+};
+
+function showMenu(type) {
+    const menuSection = document.getElementById("menu");
+    const menuItems = document.getElementById("menu-items");
+
+    menuItems.innerHTML = menus[type].map(item => <p>${item.name} - ${item.price}</p>).join("");
+    menuSection.classList.remove("hidden");
+}
+
+function hideMenu() {
+    document.getElementById("menu").classList.add("hidden");
+}
